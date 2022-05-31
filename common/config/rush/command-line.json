@@ -18,6 +18,30 @@
       "autoinstallerName": "rush-prettier",
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "name": "cz",
+      "commandKind": "global",
+      "summary": "This command invokes git commit with cz.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "cz",
+      "shellCommand": "git cz"
+    },
+    {
+      "name": "cz:install",
+      "commandKind": "global",
+      "summary": "This command invokes cz installation.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "cz",
+      "shellCommand": "commitizen init cz-conventional-changelog --yarn --dev --exact"
+    },
+    {
+      "name": "cz:force",
+      "commandKind": "global",
+      "summary": "This command invokes cz installation forcefully.",
+      "safeForSimultaneousRushProcesses": true,
+      "autoinstallerName": "cz",
+      "shellCommand": "commitizen init cz-conventional-changelog --yarn --dev --exact --force"
     }
     // {
     //   /**
