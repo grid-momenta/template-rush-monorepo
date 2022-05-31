@@ -2,5 +2,23 @@
 	"name": "cz",
 	"version": "1.0.0",
 	"private": true,
-	"dependencies": {}
+	"scripts": {
+		"cz": "git cz",
+		"cz:install": "commitizen init cz-conventional-changelog --yarn --dev --exact",
+		"cz:force": "commitizen init cz-conventional-changelog --yarn --dev --exact --force"
+	},
+	"dependencies": {
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
+		"husky": "^8.0.1",
+		"lint-staged": "^12.4.3"
+	},
+	"lint-staged": {
+		"*": "prettier --write --ignore-unknown"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }
